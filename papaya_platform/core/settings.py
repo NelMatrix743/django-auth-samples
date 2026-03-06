@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # django browser reload
     "django_browser_reload",
+
+    # django watch files
+    "django_watchfiles",
 ]
 
 MIDDLEWARE = [
