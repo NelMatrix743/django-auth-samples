@@ -8,4 +8,5 @@ dependencies = [
     "django>=6.0.3",
     "django-browser-reload>=1.21.0",
     "django-unfold>=0.82.0",
+    "django-watchfiles>=1.4.0",
 ]
