@@ -22,4 +22,8 @@ urlpatterns = [
 
     # django browser reload url conf
     path("__reload__/", include("django_browser_reload.urls")),
+
+    # custom apps
+    path('', include("apps.home.urls")),
+    path('accounts/', include("apps.accounts.urls")),
 ]
