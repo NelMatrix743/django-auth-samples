@@ -33,7 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # django unfold for admin panel
     "unfold",
-    
+
+    # core django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +47,10 @@ INSTALLED_APPS = [
 
     # django watch files
     "django_watchfiles",
+
+    # custom apps
+    "apps.accounts",
+    "apps.home",
 ]
 
 MIDDLEWARE = [
