@@ -3,13 +3,17 @@
 
 {% block title %} Papaya-Plaform - Sign In {% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
 {% block content %}
 
     <!-- <h1>
         THIS IS THE <span style="color: PURPLE;">LOGIN</span> PAGE!
     </h1> -->
 
-    <form method="POST" action="{% url 'accounts:login' %}">
+    <form class="login-form" method="POST" action="{% url 'accounts:login' %}">
 
         {% csrf_token %}
 
