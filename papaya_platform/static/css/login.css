@@ -1,0 +1,11 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background: var(--form-background-color);
+    box-shadow: var(--form-background-shadow);
+    border-radius: var(--form-box-radius);
+    gap: var(--form-content-spacing);
+}
