@@ -1,7 +1,11 @@
 :root {
-    /* body background */
-    --body-background: linear-gradient(45deg, #e2e2e2, #c9d6ff);
-
-    /* body content color */
+    /* body */
+    --body-background-color: linear-gradient(45deg, #e2e2e2, #c9d6ff);
     --body-content-color: #333;
+
+    /* form */
+    --form-background-color: #fff;
+    --form-background-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --form-box-radius: 10px;
+    --form-content-spacing: 20px;
 }
