@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Papaya-Plaform - Sign In {% endblock %}
+
+{% block content %}
+
+    <!-- <h1>
+        THIS IS THE <span style="color: PURPLE;">LOGIN</span> PAGE!
+    </h1> -->
+
+    <form method="POST" action="{% url 'accounts:login' %}">
+
+        {% csrf_token %}
+
+        <h2>Login </h2>
+
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+
+        <button type="submit">LOGIN</button>
+
+        <p>
+            You don't have an account? <a href="{% url 'accounts:register' %}">REGISTER NOW</a>
+        </p>
+
+
+    </form>
+
+{% endblock %}
