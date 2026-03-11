@@ -1,0 +1,7 @@
+:root {
+    /* body background */
+    --body-background: linear-gradient(45deg, #e2e2e2, #c9d6ff);
+
+    /* body content color */
+    --body-content-color: #333;
+}
