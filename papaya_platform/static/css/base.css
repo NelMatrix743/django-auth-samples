@@ -6,3 +6,17 @@
     box-sizing: border-box;
     font-family: "Poppins", "consolas", sans-serif;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--body-background-color);
+    color: var(--body-content-color);
+}
+
+.container {
+    margin: 0px 20px;
+}
