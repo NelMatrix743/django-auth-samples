@@ -14,4 +14,13 @@
     --input-border-radius: 8px;
     --input-font-size: 16px;
     --input-foreground-color: #333;
+
+    /* button */
+    --button-background-color: #7494ec;
+    --button-border-radius: 8px;
+    --button-hover-cursor: pointer;
+    --button-font-size: 16px;
+    --button-font-weight: 500;
+    --button-foreground-color: #fff;
+    --button-transition-time: 0.5s;
 }
