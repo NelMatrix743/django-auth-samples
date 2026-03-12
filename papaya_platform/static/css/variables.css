@@ -8,4 +8,10 @@
     --form-background-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     --form-box-radius: 10px;
     --form-content-spacing: 20px;
+
+    /* input */
+    --input-background-color: #eee;
+    --input-border-radius: 8px;
+    --input-font-size: 16px;
+    --input-foreground-color: #333;
 }
