@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 500px;
+    width: 500px;
     padding: 30px;
     background: var(--form-background-color);
     box-shadow: var(--form-background-shadow);
@@ -44,4 +44,20 @@ button {
 
 button:hover {
     background: var(--button-hover-background-color);
+}
+
+p {
+    font-size: 14.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #7494ec;
+    text-decoration-line: none;
+    margin-left: 5px;
+}
+
+a:hover {
+    color: #0d3cbe;
 }
