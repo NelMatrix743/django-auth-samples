@@ -20,3 +20,46 @@ body {
 .container {
     margin: 0px 20px;
 }
+
+
+/* general styles for login and registration forms */
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-background-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: var(--button-hover-cursor);
+    font-size: var(--button-font-size);
+    color: var(--button-foreground-color);
+    font-weight: var(--button-font-weight);
+    margin-bottom: 20px;
+    transition: var(--button-transition-time);
+}
+
+button:hover {
+    background: var(--button-hover-background-color);
+}
+
+p {
+    font-size: 14.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #7494ec;
+    text-decoration-line: none;
+    margin-left: 5px;
+}
+
+a:hover {
+    color: #0d3cbe;
+}
