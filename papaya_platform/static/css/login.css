@@ -27,3 +27,17 @@ input {
     color: var(--input-foreground-color);
     margin-bottom: 20px;
 }
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-background-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: var(--button-hover-cursor);
+    font-size: var(--button-font-size);
+    color: var(--button-foreground-color);
+    font-weight: var(--button-font-weight);
+    margin-bottom: 20px;
+    transition: var(--button-transition-time);
+}
