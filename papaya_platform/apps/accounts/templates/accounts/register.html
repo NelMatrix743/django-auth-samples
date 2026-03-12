@@ -5,8 +5,23 @@
 
 {% block content %}
 
-    <h1>
+    <!-- <h1>
         THIS IS THE <span style="color: red;">REGISTRATION</span> PAGE!
-    </h1>
+    </h1> -->
+
+    <form class="registration-form" method="POST" action="{% url 'accounts:register' %}">
+
+        {% csrf_token %}
+
+        <h2>Register </h2>
+
+
+
+        <p>
+            You already have an account? <a href="{% url 'accounts:login' %}">LOGIN NOW</a>
+        </p>
+
+
+    </form>
 
 {% endblock %}
