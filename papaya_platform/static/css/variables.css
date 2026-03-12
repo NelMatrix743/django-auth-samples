@@ -23,4 +23,7 @@
     --button-font-weight: 500;
     --button-foreground-color: #fff;
     --button-transition-time: 0.5s;
+
+    /* button hover effect */
+    --button-hover-background-color: #6884d3;
 }

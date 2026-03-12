@@ -41,3 +41,7 @@ button {
     margin-bottom: 20px;
     transition: var(--button-transition-time);
 }
+
+button:hover {
+    background: var(--button-hover-background-color);
+}
