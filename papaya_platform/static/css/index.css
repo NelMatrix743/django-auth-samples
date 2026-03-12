@@ -22,7 +22,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    width: 45%;
     height: 60%;
     padding: 10px 20px;
     background: #EEEEEE;
