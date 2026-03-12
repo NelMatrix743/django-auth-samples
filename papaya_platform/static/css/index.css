@@ -37,6 +37,7 @@ h1 {
 
 h1 span {
     color: #7494ec;
+    margin-left: 10px;
 }
 
 main > p {
@@ -51,16 +52,21 @@ main > p {
 .user-info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     padding-left: 50px;
     padding-right: 20px;
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     font-size: 18px;
 }
 
+.name {
+    margin-left: 10px;
+    color: #0d3cbe;
+}
+
 form {
-    text-align: center
+    text-align: center;
 }
 
 form button {
