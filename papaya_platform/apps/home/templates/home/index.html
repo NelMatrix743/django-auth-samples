@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+    
+    <title>{% block title %} Papaya - Home Page {% endblock %}</title>
+</head>
+<body>
+
+    <main>
+
+        <h1>
+            Welcome, <span>{{ user.username }}</span>
+        </h1>
+
+        <p>Your user information are as follows:</p>
+
+        <div class="user-info">
+            <p>FIRST NAME: {{ user.first_name }}</p>
+            <p>LAST NAME:  {{ user.last_name }}</p>
+        </div>
+
+        <form method="POST" action="{% url 'accounts:logout' %}">
+            {% csrf_token %}
+            <button type="submit">LOGOUT</button>
+        </form>
+
+    </main>
+
+</body>
+</html>
