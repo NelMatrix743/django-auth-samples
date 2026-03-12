@@ -23,8 +23,8 @@
         <p>Your account details are as follows:</p>
 
         <div class="user-info">
-            <p>FIRST NAME: {{ user.first_name }}</p>
-            <p>LAST NAME:  {{ user.last_name }}</p>
+            <p class="label">FIRST NAME: <span class="name">{{ user.first_name }}</span></p>
+            <p class="label">LAST NAME:  <span class="name">{{ user.last_name }}</span></p>
         </div>
 
         <form method="POST" action="{% url 'accounts:logout' %}">
