@@ -1,0 +1,23 @@
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 500px;
+    padding: 30px;
+    background: var(--form-background-color);
+    box-shadow: var(--form-background-shadow);
+    border-radius: var(--form-box-radius);
+    gap: var(--form-content-spacing);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background:  var(--input-background-color);
+    border: none;
+    border-radius: var(--input-border-radius);
+    outline: none;
+    font-size: var(--input-font-size);
+    color: var(--input-foreground-color);
+    margin-bottom: 5px;
+}
