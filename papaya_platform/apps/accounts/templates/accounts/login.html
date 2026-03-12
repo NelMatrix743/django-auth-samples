@@ -17,7 +17,16 @@
 
         {% csrf_token %}
 
-        <h2>Login </h2>
+        <h2>Login</h2>
+
+        <!-- possible login errors -->
+        {% if errors %}
+            <ul>
+                {% for error in errors.values %}
+                    <li class="error-message">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>

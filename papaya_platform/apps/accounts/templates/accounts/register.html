@@ -19,6 +19,15 @@
 
         <h2>Register</h2>
 
+       <!-- possible registration errors -->
+        {% if errors %}
+            <ul>
+                {% for error in errors.values %}
+                    <li class="error-message">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         <input type="text" name="first_name" placeholder="First Name" required>
         <input type="text" name="last_name" placeholder="Last Name" required>
         <input type="text" name="username" placeholder="Username" required>
