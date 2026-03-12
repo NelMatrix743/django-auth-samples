@@ -26,4 +26,10 @@
 
     /* button hover effect */
     --button-hover-background-color: #6884d3;
+
+    /* error messages */
+    --error-background-color: #f8d7da;
+    --error-foreground-color: #a42834;
+    --error-font-size: 16px;
+    --error-border-radius: 8px;
 }
