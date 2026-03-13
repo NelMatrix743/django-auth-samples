@@ -21,11 +21,7 @@
 
         <!-- possible login errors -->
         {% if errors %}
-            <ul>
-                {% for error in errors.values %}
-                    <li class="error-message">{{ error }}</li>
-                {% endfor %}
-            </ul>
+            <p class="error-message">{{ errors.login_error }}</p>
         {% endif %}
 
         <input type="text" name="username" placeholder="Username" required>
