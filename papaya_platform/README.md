@@ -13,6 +13,8 @@ With this project, I learnt how to implement Function-based login, logout, and r
 
 ![](screenshots/registration_screen.png)  
 
+![](screenshots/home_screen.png)
+
 
 ---
 MIT LICENSE  
