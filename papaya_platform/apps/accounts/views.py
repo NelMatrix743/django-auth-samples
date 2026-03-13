@@ -3,13 +3,13 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.conf import settings
-
 from django.views.decorators.http import require_POST
 
 
-# Create your views here.
 
 def system_register(request: HttpRequest) -> HttpResponse:
+    """ user registration view """
+
     if request.method == "POST":
         error_messages = {}
 
@@ -51,6 +51,8 @@ def system_register(request: HttpRequest) -> HttpResponse:
 
 
 def system_login(request: HttpRequest) -> HttpResponse:
+    """ user login view """
+
     error_messages = {}
 
     if request.method == "POST":
@@ -79,6 +81,8 @@ def system_login(request: HttpRequest) -> HttpResponse:
 
 @require_POST
 def system_log_out(request: HttpRequest) -> HttpResponse:
+    """" user logout view """
+
     logout(request)
     return redirect(settings.LOGOUT_REDIRECT_URL)
 
