@@ -10,6 +10,43 @@ from django.views.decorators.http import require_POST
 # Create your views here.
 
 def system_register(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        error_messages = {}
+
+        registration_data: QueryDict = request.POST
+
+        first_name: str = registration_data.get("first_name")
+        last_name: str = registration_data.get("last_name")
+        user_name: str = registration_data.get("username")
+
+        password: str = registration_data.get("password")
+        confirm_password: str = registration_data.get("confirm_password")
+
+        if User.objects.filter(username=user_name).exists():
+            error_messages["user_err"] = "Username already exists"
+
+        if password != confirm_password:
+            error_messages["password_err"] = "Passwords do not match"
+
+        if error_messages:
+            context = {
+                "errors" : error_messages,
+                "data" : registration_data  # did not use this property in this project
+            }
+            return render(request, "accounts/register.html", context)
+        
+        user = User.objects.create_user(
+            username=user_name,
+            password=password
+        )
+
+        user.first_name = first_name
+        user.last_name = last_name
+        user.save()
+
+        login(request, user)
+        return redirect(settings.LOGIN_REDIRECT_URL)
+
     return render(request, "accounts/register.html")
 
 
