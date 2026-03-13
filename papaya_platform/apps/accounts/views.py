@@ -1,6 +1,6 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
 from django.conf import settings
 
 from django.views.decorators.http import require_POST
@@ -13,7 +13,30 @@ def system_register(request: HttpRequest) -> HttpResponse:
 
 
 def system_login(request: HttpRequest) -> HttpResponse:
-    return render(request, "accounts/login.html")
+    error_messages = {}
+
+    if request.method == "POST":
+        post_data = request.POST
+        user_name: str = post_data.get("username")
+        user_password: str = post_data.get("password")
+
+        user = authenticate(
+            request,
+            username=user_name,
+            password=user_password
+        )
+
+        if user:
+            login(request, user)
+            return redirect(settings.LOGIN_REDIRECT_URL)
+        
+        error_messages["login_error"] = "Invalid username or password"
+
+    context = {
+        "errors" : error_messages
+    }
+
+    return render(request, "accounts/login.html", context)
 
 
 @require_POST
