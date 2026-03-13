@@ -1,6 +1,7 @@
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, QueryDict
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.models import User
 from django.conf import settings
 
 from django.views.decorators.http import require_POST
@@ -16,9 +17,9 @@ def system_login(request: HttpRequest) -> HttpResponse:
     error_messages = {}
 
     if request.method == "POST":
-        post_data = request.POST
-        user_name: str = post_data.get("username")
-        user_password: str = post_data.get("password")
+        login_creds: QueryDict = request.POST
+        user_name: str = login_creds.get("username")
+        user_password: str = login_creds.get("password")
 
         user = authenticate(
             request,
